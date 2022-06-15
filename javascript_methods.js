@@ -30,7 +30,13 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-    // Place your code here.
+    let filtered = [];  // New array that will hold the results
+    for(let i = 0; i < this.length; i++){
+        if(callbackFn(this[i])){  // Return all values that match the condition passed in the callback function.
+            filtered.myPush(this[i])
+        }
+    }
+    return filtered;  // Output new array
 };
 
 // SOME //
