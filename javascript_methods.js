@@ -61,12 +61,21 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-    // Place your code here.
+    var res = 0;
+    for (let i = 0; i < this.length; i++){ // cycles through each number in the array
+        callbackFn(res = res + this[i]) // On every iteration we add the element 
+    }
+    return res; // Return the total sum
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++){
+        if (searchElement === this[i]){  // If the searchElement is in the array: return true
+            return true;
+        }
+    }
+    return false;  // If the searchElement is not in the array: return false
 };
 
 // INDEXOF //
