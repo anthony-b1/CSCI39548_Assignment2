@@ -30,12 +30,23 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-    // Place your code here.
+    let filtered = [];  // New array that will hold the results
+    for(let i = 0; i < this.length; i++){
+        if(callbackFn(this[i])){  // Return all values that match the condition passed in the callback function.
+            filtered.myPush(this[i])
+        }
+    }
+    return filtered;  // Output new array
 };
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++){  
+        if (callbackFn(this[i], i, this)){ // We execute the callback function for each value
+            return true;  // If "true" at any point, we exit the loop
+        }
+    }
+    return false;  // Returns "false" when the if-statement never return "true"
 };
 
 // EVERY //
