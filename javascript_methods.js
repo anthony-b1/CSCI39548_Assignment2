@@ -70,12 +70,22 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++){
+        if (searchElement === this[i]){  // If the searchElement is in the array: return true
+            return true;
+        }
+    }
+    return false;  // If the searchElement is not in the array: return false
 };
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++){
+        if (searchElement === this[i]){  // If the searchElement is in the array: return the index
+            return i;
+        }
+    }
+    return -1;  // If the searchElement is not in the array: -1
 };
 
 // LASTINDEXOF //
