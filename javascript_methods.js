@@ -61,7 +61,11 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-    // Place your code here.
+    var res = 0;
+    for (let i = 0; i < this.length; i++){ // cycles through each number in the array
+        callbackFn(res = res + this[i]) // On every iteration we add the element 
+    }
+    return res; // Return the total sum
 };
 
 // INCLUDES //
