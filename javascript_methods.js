@@ -41,7 +41,12 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++){  
+        if (callbackFn(this[i], i, this)){ // We execute the callback function for each value
+            return true;  // If "true" at any point, we exit the loop
+        }
+    }
+    return false;  // Returns "false" when the if-statement never return "true"
 };
 
 // EVERY //
