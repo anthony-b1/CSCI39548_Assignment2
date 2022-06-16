@@ -100,10 +100,18 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-    // Place your code here.
+    let res = []  
+    for (var key in object){ // Get the keys of the object
+        res.myPush(key);  // Push keys onto an array
+    }
+    return res;  // Return the array with results
 };
 
 // VALUES //
 Object.myValues = function(object) {
-    // Place your code here.
+    let res = []  
+    for (var key in object){ // Get the keys of the object
+        res.myPush(object[key]);  // Push values onto an array
+    }
+    return res;  // Return the array with results
 };
