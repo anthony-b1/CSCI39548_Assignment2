@@ -90,7 +90,12 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-    // Place your code here.
+    for (let i = this.length - 1; i > -1; i--){ // Start at the end of the array
+        if (searchElement === this[i]){ // If the searchElement is in the array: return the index
+            return i;
+        }
+    }
+    return -1;  // If the searchElement is not in the array: -1
 };
 
 // KEYS //
